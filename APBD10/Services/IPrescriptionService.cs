@@ -6,4 +6,5 @@ namespace APBD10.Services;
 public interface IPrescriptionService
 {
     public Task<PrescDTO> AddPrescription([FromBody] PrescDTO prescDto);
+    public void setConfig(IConfiguration configuration);
 }

@@ -5,6 +5,20 @@ namespace APBD10.Services;
 
 public class PatientService: IPatientService
 {
+    
+    private IConfiguration _configuration;
+    private readonly DbContext _context;
+    
+    public PatientService(DbContext context)
+    {
+        _context = context;
+    }
+    
+    public void setConfig(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+    
     public  async Task<Patient> GetPatient(int id)
     {
         var dbContext = new DbContext();

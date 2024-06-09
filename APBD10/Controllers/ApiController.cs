@@ -13,11 +13,16 @@ public class ApiController : ControllerBase
 
     private readonly IPatientService _patientService;
     private readonly IPrescriptionService _prescriptionService;
+    private readonly IConfiguration _configuration;
 
-    public ApiController(IPatientService patientService, IPrescriptionService prescriptionService)
+
+    public ApiController(IPatientService patientService, IPrescriptionService prescriptionService, IConfiguration configuration)
     {
         _patientService = patientService;
         _prescriptionService = prescriptionService;
+        _configuration = configuration;
+        _patientService.setConfig(_configuration);
+        _prescriptionService.setConfig(_configuration);
     }
     
     [HttpGet("{id}")]

@@ -6,6 +6,17 @@ namespace APBD10.Services;
 
 public class PrescriptionService: IPrescriptionService
 {
+    private IConfiguration _configuration;
+    private readonly DbContext _context;
+
+    public PrescriptionService(DbContext context)
+    {
+        _context = context;
+    }
+    public void setConfig(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
     public async Task<PrescDTO> AddPrescription([FromBody] PrescDTO prescDto)
     {
         var dbContext = new DbContext();
