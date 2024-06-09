@@ -51,6 +51,12 @@ public class DbContext: Microsoft.EntityFrameworkCore.DbContext
             entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
+            
+            entity.HasData([new Doctor {Email = "email", FirstName = "asdagsd", LastName = "asdasasdasadasdasd", IdDoctor = 1}]);
+            entity.HasData([new Doctor {Email = "emqwail", FirstName = "afsdasd", LastName = "asdassdasdasdasd", IdDoctor = 21}]);
+            entity.HasData([new Doctor {Email = "emaewil", FirstName = "asdsasd", LastName = "asdasdasdasdasd", IdDoctor = 3}]);
+            entity.HasData([new Doctor {Email = "easdmail", FirstName = "aasd", LastName = "asdasddasdasdasd", IdDoctor = 54}]);
+            
         });
 
         modelBuilder.Entity<Prescription>(entity =>
