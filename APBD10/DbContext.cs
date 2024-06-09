@@ -115,5 +115,16 @@ public class DbContext: Microsoft.EntityFrameworkCore.DbContext
                 .HasConstraintName("PrescriptionMedicament_Prescriptions")
                 .OnDelete(DeleteBehavior.Restrict);
         });
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     base.OnModelCreating(modelBuilder);
+        //
+        //     modelBuilder.ApplyConfigurationsFromAssembly(typeof(DoctorEfConfiguration).Assembly);
+        //     modelBuilder.ApplyConfigurationsFromAssembly(typeof(MedicamentEfConfiguration).Assembly);
+        //     modelBuilder.ApplyConfigurationsFromAssembly(typeof(PatientEfConfiguration).Assembly);
+        //     modelBuilder.ApplyConfigurationsFromAssembly(typeof(PrescriptionEfConfiguration).Assembly);
+        //     modelBuilder.ApplyConfigurationsFromAssembly(typeof(PrescriptionMedicamentEfConfiguration).Assembly);
+        // }
+        // Metoda dla porozdzielanych na folder entity i dbcontext
     }
 }
