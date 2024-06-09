@@ -45,4 +45,7 @@ public class ApiController : ControllerBase
         var result = _prescriptionService.AddPrescription(prescDto);
         return Ok(result);
     }
+    //KOMENDY NA MIGRACJE
+    //dotnet ef migrations add InitialCreate
+    //dotnet ef database update
 }
