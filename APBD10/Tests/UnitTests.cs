@@ -1,10 +1,7 @@
-﻿using System;
-using System.Runtime.InteropServices.JavaScript;
-using APBD10.Controllers;
+﻿using APBD10.Controllers;
 using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.EntityFrameworkCore;
-using APBD10.DTOs;
 
 
 namespace APBD10.Tests;

@@ -1,6 +1,5 @@
 ﻿using APBD10.Models;
 using Microsoft.EntityFrameworkCore;
-using Moq;
 
 namespace APBD10;
 
